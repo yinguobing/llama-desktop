@@ -1,0 +1,42 @@
+{
+  "productName": "llama-chat",
+  "version": "0.0.0",
+  "identifier": "com.tauri.dev",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "llama-chat",
+        "width": 600,
+        "height": 750,
+        "minWidth": 540,
+        "minHeight": 750,
+        "resizable": true,
+        "fullscreen": false,
+        "alwaysOnTop": false,
+        "skipTaskbar": false,
+        "transparent": false,
+        "decorations": true,
+        "center": true,
+        "maximized": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

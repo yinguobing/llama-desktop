@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edeff2;
+  font-family: 'Noto Sans', 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+/* messages  */
+/* ---------------------------------------------------------------------- */
+
+.messages {
+  position: relative;
+  list-style: none;
+  padding: 20px 20px 20px 20px;
+  width: 100%;
+  height: 660px;
+  overflow: scroll;
+}
+
+.messages .message {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: all 0.1s ease-in;
+  opacity: 0;
+}
+
+.messages .message .avatar {
+  height: 40px;
+  width: 40px;
+  background-size: cover !important;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.messages .message .timestamp {
+  font-size: 10px;
+  font-weight: 300;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.messages .message.appeared {
+  opacity: 1;
+}
+
+.messages .message .text_wrapper {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 6px;
+  min-width: 60px;
+  max-width: 360px;
+  position: relative;
+}
+
+/* bot message */
+
+.messages .message.left .avatar {
+  float: left;
+  background: url('../assets/bot.jpg');
+}
+
+.messages .message.left .text_wrapper {
+  background-color: #ffffff;
+  margin-left: 20px;
+}
+
+
+.messages .message.left .timestamp {
+  color: #1a5770;
+}
+
+/* user message */
+
+.messages .message.right .avatar {
+  float: right;
+  background: url('../assets/guy.jpg');
+}
+
+.messages .message.right .text_wrapper {
+  background-color: #a3d063;
+  margin-right: 20px;
+  float: right;
+}
+
+.messages .message.right .timestamp {
+  color: #1a5770;
+}
+
+/* input */
+/* ---------------------------------------------------------------------- */
+
+.bottom_wrapper {
+  background-color: #ececec;
+  padding: 14px 20px 20px 20px;
+  margin: 0;
+  display: flex;
+}
+
+.bottom_wrapper #msg_input {
+  flex-grow: 1;
+  outline-width: 0;
+  padding: 10px;
+  border: 1px solid #bcbdc0;
+  border-radius: 8px;
+  margin-right: 15px;
+  font-size: 18px;
+}

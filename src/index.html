@@ -1,0 +1,37 @@
+<html>
+
+  <head>
+    <!-- seo related -->
+    <title>Chatbot Frontend</title>
+
+    <!-- meta related -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- vendor css & style files -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/main.js" defer></script>
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="vstack">
+        <ul id="msgbox" class="messages"></ul>
+        <form class="bottom_wrapper fixed-bottom" id="input_form">
+          <input id="msg_input" />
+          <button id="send_button" type="submit"
+            class="btn btn-success"
+            style="--bs-btn-padding-x: 2rem; --bs-btn-font-size: 1.2rem;"
+            disabled>发送</button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>
