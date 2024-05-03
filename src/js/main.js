@@ -4,7 +4,38 @@ let msgInputEl;
 let sendButtonEl;
 async function process() {
     showUserMessage(msgInputEl.value, getCurrentTimestamp());
+
+    // Show a spinner
+    let messagesContainer = $('#msgbox');
+
+    let message = $(`
+	<li class="message left">
+		<div class="avatar"></div>
+		<div class="text_wrapper">
+            <div class="spinner-grow" style="width: 0.5rem; height: 0.5rem; margin-left: 0.5rem;"  role="status">
+                <span class="visually-hidden">Generating...</span>
+            </div>
+        </div>
+        </div>
+	</li>
+	`);
+
+    // add to parent
+    messagesContainer.append(message);
+
+    // animations
+    setTimeout(function () {
+        message.addClass('appeared');
+    }, 1000);
+    messagesContainer.scrollTop(messagesContainer.prop('scrollHeight'));
+
+    // Process
     let msg = await invoke("process", { msg: msgInputEl.value });
+
+    // Remove the spinner
+    message.remove();
+
+    // Show result
     showBotMessage(msg, getCurrentTimestamp());
 }
 
