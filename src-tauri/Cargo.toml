@@ -15,3 +15,4 @@ tauri = { version = "2.0.0-beta", features = [] }
 tauri-plugin-shell = "2.0.0-beta"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+llama3 = { git = "https://github.com/yinguobing/llama.rs.git", version = "0.1.0", features = ["cudnn", "flash-attn"] }

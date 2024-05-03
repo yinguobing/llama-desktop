@@ -2,9 +2,10 @@ const { invoke } = window.__TAURI__.core;
 
 let msgInputEl;
 let sendButtonEl;
-async function send() {
-    let msg = await invoke("send", { msg: msgInputEl.value });
-    showUserMessage(msg, getCurrentTimestamp());
+async function process() {
+    showUserMessage(msgInputEl.value, getCurrentTimestamp());
+    let msg = await invoke("process", { msg: msgInputEl.value });
+    showBotMessage(msg, getCurrentTimestamp());
 }
 
 /**
@@ -16,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector("#input_form").addEventListener("submit", (e) => {
         e.preventDefault();
-        send();
+        process();
         msgInputEl.value = "";
         msgInputEl.focus();
         sendButtonEl.disabled = true;
