@@ -27,7 +27,9 @@ async fn process(state: tauri::State<'_, Mutex<State>>, msg: &str) -> Result<Str
         role: Role::Assistant,
         content: response.clone(),
     });
-    Ok(response)
+
+    // Format for HTML then return
+    Ok(response.replace("\n", "<br>"))
 }
 
 fn init_llm() -> LlamaChat {
