@@ -9,7 +9,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "llama-chat",
+        "title": "LLaMA Chat",
         "width": 600,
         "height": 750,
         "minWidth": 540,
